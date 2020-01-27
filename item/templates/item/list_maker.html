@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <ul>
+        {% for maker in maker_list %}
+        <li>
+            <a href="{{ maker.get_absolute_url }}">{{maker.name}}</a>
+            {{maker.phone}}
+            {{maker.address}}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

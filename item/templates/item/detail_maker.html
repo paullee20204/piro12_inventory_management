@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{  maker.name }}</h2>
+
+    {{ maker.phone }}
+    {{ maker.address }}
+    <hr/>
+
+    {% for item in maker.products.all %}
+    <div>
+        {{ item.name }} | 가격: {{ item.price }}
+    </div>
+    {% endfor %}
+    <hr/>
+    <a href="{% url "list_maker" %}">목록</a>
+    <a href="{% url "update_maker" maker.pk %}">수정</a>
+
+
+    <form action="/maker/delete/{{ maker.id }}/" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="삭제하기">
+    </form>
+
+
+{% endblock %}

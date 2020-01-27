@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action = "/item/update/{{ item.id }}/" method="POST">
+        {% csrf_token %}
+        <p>제품명: <input type="text" name="name" value="{{item.name}}"/></p>
+        <p>제품설명: <textarea name="desc">{{ item.desc }}</textarea></p>
+        <p>가격: <input type="number" min="0" name="price" value="{{item.price}}"></p>
+        <p>남은수량: <input type="number" min="0" name="leftover" value="{{item.leftover}}"></p>
+        <input type="submit" value="저장"/>
+    </form>
+{% endblock %}

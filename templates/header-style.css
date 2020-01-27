@@ -1,0 +1,138 @@
+﻿.nav{
+    height: 77px;
+    background-color:white;
+    position: sticky;
+    top:0;
+    left:0;
+}
+
+.nav-con{
+    display:flex;
+    justify-content: space-between;
+    padding:26px 20px;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+}
+
+.nav-bar{
+    height:28px;
+    border-right:1px solid rgb(192, 192, 192);
+    margin:0 16px;
+}
+
+.nav-logo > img{
+    margin-top:7px;
+}
+
+.nav-left > i{
+    font-size:24px;
+}
+
+.nav-right {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 35%;
+}
+
+.nav-right >i{
+    font-size: 24px;
+}
+
+.profile {
+    display: flex;
+    width: auto;
+    height: 82px;
+    margin: 30px 16px 24px 16px;
+}
+
+.profile-left{
+    margin-right: 28px;
+}
+
+.profile-left > img{
+    width:77px;
+    height:77px;
+    border-radius:100%;
+    object-fit:cover;
+}
+
+.profile-right{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    width:100%;
+}
+
+.profile-id{
+    width:100%;
+    font-size: 28px;
+}
+
+.profile-edit{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding: 6px 0;
+    border: 1px solid rgb(192,192,192);
+    border-radius: 5px;
+}
+
+hr{
+    margin:0;
+    border-top:0.3px solid rgb(192,192,192);
+}
+
+.story{
+    width:100%;
+    height: 100px;
+    margin-bottom: 28px;
+}
+
+.story-list{
+    display:flex;
+    height:90px;
+    overflow: scroll;
+}
+
+.story-img-con{
+    margin-bottom: 7px;
+}
+
+.story-img-con > img{
+    height: 56px;
+    width: 56px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px black;
+}
+
+.story-list > li{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;  
+    margin-left:20px;
+}
+
+.post-wrap{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+}
+
+.post{
+    display:flex;
+    justify-content:center;
+}
+
+.post >img{
+    width:123px;
+    height:123px;
+    object-fit:cover;
+}

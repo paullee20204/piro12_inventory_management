@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action = "/maker/update/{{ maker.id }}/" method="POST">
+        {% csrf_token %}
+        <p>이름: <input type="text" name="name" value="{{maker.name}}"/></p>
+        <p>전화번호: <input type="text" name="phone" value="{{maker.phone}}"/></p>
+        <p>주소: <input type="text" name="address" value="{{maker.address}}"/></p>
+        <input type="submit" value="저장"/>
+    </form>
+{% endblock %}
